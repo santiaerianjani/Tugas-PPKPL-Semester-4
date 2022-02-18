@@ -1,0 +1,609 @@
+{
+  "id": "573d1a28-cd15-4b04-8497-302b62c336a0",
+  "version": "2.0",
+  "name": "Pengujian Aplikasi CRUD Pendaftaran Siswa",
+  "url": "http://localhost/pendaftaran_siswa/",
+  "tests": [{
+    "id": "0d78365c-0c0a-49bf-a1cf-8601f93921c6",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "d7d5e6e0-7013-462e-bc7f-9a44d638823a",
+    "name": "1. (a) Pengujian fungsional PL terhadap fitur login (Username dan password yang sudah terdaftar pada basis data)",
+    "commands": [{
+      "id": "f148acae-7deb-49f5-b84f-d96c71f9bc39",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/pendaftaran_siswa/login/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "642a277d-8183-4597-b169-8a5fafd95608",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05e7d382-6b8b-4891-877c-682a5ed040f4",
+      "comment": "",
+      "command": "click",
+      "target": "name=Username",
+      "targets": [
+        ["name=Username", "name"],
+        ["css=.input-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2a05368-c128-4581-85e2-f3eccf8d4515",
+      "comment": "",
+      "command": "type",
+      "target": "name=Username",
+      "targets": [
+        ["name=Username", "name"],
+        ["css=.input-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "dbd9b459-137c-4bc8-827f-af9659338d5c",
+      "comment": "",
+      "command": "click",
+      "target": "name=Password",
+      "targets": [
+        ["name=Password", "name"],
+        ["css=.input-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a38c93cb-c284-4b0c-94d8-a0d43961ec01",
+      "comment": "",
+      "command": "type",
+      "target": "name=Password",
+      "targets": [
+        ["name=Password", "name"],
+        ["css=.input-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "5232d56c-a0b5-4f1f-8905-bd0792b08ccf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0607eda-5b91-4911-9f74-640ef306e8b6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.content-wrapper",
+      "targets": [
+        ["css=.content-wrapper", "css:finder"],
+        ["xpath=//body/div/div", "xpath:position"]
+      ],
+      "value": "Dashboard\\n5\\nData Siswa Baru\\nMore info\\n2\\nData Guru\\nMore info\\n3\\nData Mata pelajaran\\nMore info"
+    }, {
+      "id": "d0fb8a02-2ca6-4821-811b-43efdc67d91c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "44999022-092e-462c-be48-0c9eec991c13",
+    "name": "1. (b) Pengujian kegagalan PL melalui pengisian username dan password yang dapat mengakibatkan gagal login",
+    "commands": [{
+      "id": "08c6e4ab-c247-4fca-a67c-aab594a26e56",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/pendaftaran_siswa/login/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f3c9d5bc-e338-47b8-932f-8d08ed0683ca",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "ca1dab43-00d1-4dde-8882-c20f89e60c48",
+      "comment": "",
+      "command": "click",
+      "target": "name=Username",
+      "targets": [
+        ["name=Username", "name"],
+        ["css=.input-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "90af6a38-0765-41c6-ba2b-392e6ea509f5",
+      "comment": "",
+      "command": "type",
+      "target": "name=Username",
+      "targets": [
+        ["name=Username", "name"],
+        ["css=.input-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "aku"
+    }, {
+      "id": "6920dc76-d030-405a-844b-e78a45f3ad9d",
+      "comment": "",
+      "command": "click",
+      "target": "name=Password",
+      "targets": [
+        ["name=Password", "name"],
+        ["css=.input-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "77a3f38d-4dd7-482a-8b0b-b02eb584ff34",
+      "comment": "",
+      "command": "type",
+      "target": "name=Password",
+      "targets": [
+        ["name=Password", "name"],
+        ["css=.input-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "kamu"
+    }, {
+      "id": "8c8bcf00-576f-4f12-9f8e-1dd382c0901e",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "2784c80c-0715-4547-bece-64ad2e78a506",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.login-page",
+      "targets": [
+        ["css=.login-page", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": "LoginStaff\\nSign in to start your session\\nLogin gagal username dan password Salah\\nRemember Me\\nSign In"
+    }, {
+      "id": "629eb8bc-f2e7-4056-8664-3a44c6f359c0",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "770f1870-2cc9-4328-8f8b-33b479286f84",
+    "name": "1. (c) Pengujian kegagalan PL dengan data yang tidak lengkap",
+    "commands": [{
+      "id": "1361eb10-11a2-4af7-a9bd-620a66e43eb0",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/pendaftaran_siswa/login/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "91ad67a6-4f91-4d59-be91-4333b129f634",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5c6c63fb-93bc-40e6-a150-9fb6bd73eba9",
+      "comment": "",
+      "command": "click",
+      "target": "name=Username",
+      "targets": [
+        ["name=Username", "name"],
+        ["css=.input-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "73a0728e-b0dd-4493-b2d9-d39836ee769e",
+      "comment": "",
+      "command": "type",
+      "target": "name=Username",
+      "targets": [
+        ["name=Username", "name"],
+        ["css=.input-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "97700fc8-7383-4147-a103-df171f9ca3ab",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "23bd3b9c-8467-42b9-a8c9-134aad0840a4",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.login-page",
+      "targets": [
+        ["css=.login-page", "css:finder"],
+        ["xpath=//body", "xpath:position"]
+      ],
+      "value": "LoginStaff\\nSign in to start your session\\nLogin gagal username dan password Salah\\nRemember Me\\nSign In"
+    }, {
+      "id": "69d17a72-1046-4fc4-8dec-80054bc82d7f",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "0945ee4a-1b8e-43fb-9547-53a624fa2dd4",
+    "name": "2. (a) Mengisi formulir data siswa baru secara lengkap ",
+    "commands": [{
+      "id": "360b4d8d-c71e-42ce-8250-8bdfd0a167c7",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/pendaftaran_siswa/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "4af0e8b1-f818-4cc5-aabd-356c777be746",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "64956251-52e1-4e0f-9c21-8e4ddeeefc4d",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=More info",
+      "targets": [
+        ["linkText=More info", "linkText"],
+        ["css=.bg-info > .small-box-footer", "css:finder"],
+        ["xpath=//a[contains(text(),'More info')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'view_data.php')])[2]", "xpath:href"],
+        ["xpath=//section/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'More info ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e8b3fdb5-7391-4b57-a9ff-fcd4010a4994",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tambah",
+      "targets": [
+        ["linkText=Tambah", "linkText"],
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Tambah')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, 'form-daftar.php')]", "xpath:href"],
+        ["xpath=//section/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Tambah')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a32c010d-2f6c-49e2-ac1b-07081f908ba0",
+      "comment": "",
+      "command": "click",
+      "target": "name=nama",
+      "targets": [
+        ["name=nama", "name"],
+        ["css=p:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='nama']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "09cc419a-133d-45ee-860f-3eb89763e7f6",
+      "comment": "",
+      "command": "type",
+      "target": "name=nama",
+      "targets": [
+        ["name=nama", "name"],
+        ["css=p:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='nama']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Santi Aeri Anjani"
+    }, {
+      "id": "598047e1-1926-4c2e-9f9f-b36eac8e4b82",
+      "comment": "",
+      "command": "click",
+      "target": "name=alamat",
+      "targets": [
+        ["name=alamat", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='alamat']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "fed3f54e-77fc-4bc4-b31b-d88445329702",
+      "comment": "",
+      "command": "type",
+      "target": "name=alamat",
+      "targets": [
+        ["name=alamat", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='alamat']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Bojong Slawi"
+    }, {
+      "id": "2b317d86-4a94-4c8d-a8b7-6fcaa7c410f8",
+      "comment": "",
+      "command": "click",
+      "target": "css=label:nth-child(3) > input",
+      "targets": [
+        ["css=label:nth-child(3) > input", "css:finder"],
+        ["xpath=(//input[@name='jenis_kelamin'])[2]", "xpath:attributes"],
+        ["xpath=//label[3]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c82911a0-32f3-4c87-8a7c-10964aed88ae",
+      "comment": "",
+      "command": "click",
+      "target": "name=sekolah_asal",
+      "targets": [
+        ["name=sekolah_asal", "name"],
+        ["css=p:nth-child(5) > input", "css:finder"],
+        ["xpath=//input[@name='sekolah_asal']", "xpath:attributes"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c16cf053-281b-4e56-bbfc-f4692be61c9d",
+      "comment": "",
+      "command": "type",
+      "target": "name=sekolah_asal",
+      "targets": [
+        ["name=sekolah_asal", "name"],
+        ["css=p:nth-child(5) > input", "css:finder"],
+        ["xpath=//input[@name='sekolah_asal']", "xpath:attributes"],
+        ["xpath=//p[5]/input", "xpath:position"]
+      ],
+      "value": "SMK PGRI JATIBARANG"
+    }, {
+      "id": "8eedd4f6-a17c-4e59-97ca-9805f28475bf",
+      "comment": "",
+      "command": "click",
+      "target": "name=daftar",
+      "targets": [
+        ["name=daftar", "name"],
+        ["css=p:nth-child(6) > input", "css:finder"],
+        ["xpath=//input[@name='daftar']", "xpath:attributes"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "5e58a058-4479-4abf-b8c6-46d2634a6de9",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=More info",
+      "targets": [
+        ["linkText=More info", "linkText"],
+        ["css=.bg-info > .small-box-footer", "css:finder"],
+        ["xpath=//a[contains(text(),'More info')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'view_data.php')])[2]", "xpath:href"],
+        ["xpath=//section/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'More info ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e39b2464-2af7-4abc-a639-9af6f2623e38",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(5) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(5) > td:nth-child(2)", "css:finder"],
+        ["xpath=//table[@id='example1']/tbody/tr[5]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[5]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Santi Aeri Anjani')]", "xpath:innerText"]
+      ],
+      "value": "Santi Aeri Anjani"
+    }, {
+      "id": "e25d2e93-a865-495d-8fc8-a467595a7571",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }, {
+    "id": "b1a7ce30-c89a-4aa1-b253-7ce9638a98a2",
+    "name": "2, (b) Mengisi formulir data siswa baru dengan mengosongkan salah satu formulir",
+    "commands": [{
+      "id": "d03ccac2-a3df-4bbc-87a0-c3193a6571d8",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/pendaftaran_siswa/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "df57e681-979b-44f2-9489-66d596f458c1",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "72d67871-eab7-448e-be35-edd52755ac41",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=More info",
+      "targets": [
+        ["linkText=More info", "linkText"],
+        ["css=.bg-info > .small-box-footer", "css:finder"],
+        ["xpath=//a[contains(text(),'More info')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'view_data.php')])[2]", "xpath:href"],
+        ["xpath=//section/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'More info ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "8d273044-dd33-4d43-bfaf-8976736eb230",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Tambah",
+      "targets": [
+        ["linkText=Tambah", "linkText"],
+        ["css=.btn:nth-child(2)", "css:finder"],
+        ["xpath=//a[contains(text(),'Tambah')]", "xpath:link"],
+        ["xpath=//a[@type='button']", "xpath:attributes"],
+        ["xpath=//a[contains(@href, 'form-daftar.php')]", "xpath:href"],
+        ["xpath=//section/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Tambah')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0247c617-6ce3-4d08-bfc1-dacd219025a7",
+      "comment": "",
+      "command": "click",
+      "target": "name=nama",
+      "targets": [
+        ["name=nama", "name"],
+        ["css=p:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='nama']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "2cda8ca6-37e3-488f-a83e-a1ee87559522",
+      "comment": "",
+      "command": "type",
+      "target": "name=nama",
+      "targets": [
+        ["name=nama", "name"],
+        ["css=p:nth-child(1) > input", "css:finder"],
+        ["xpath=//input[@name='nama']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "Rizky"
+    }, {
+      "id": "a772fb15-6bab-42c8-bb58-05347c378bdb",
+      "comment": "",
+      "command": "click",
+      "target": "name=alamat",
+      "targets": [
+        ["name=alamat", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='alamat']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "ad246b96-2293-4b0f-9e27-60d1bfbae327",
+      "comment": "",
+      "command": "type",
+      "target": "name=alamat",
+      "targets": [
+        ["name=alamat", "name"],
+        ["css=textarea", "css:finder"],
+        ["xpath=//textarea[@name='alamat']", "xpath:attributes"],
+        ["xpath=//textarea", "xpath:position"]
+      ],
+      "value": "Cirebon"
+    }, {
+      "id": "15a11918-9368-4b89-bcdd-1b4e62d42a4c",
+      "comment": "",
+      "command": "click",
+      "target": "name=jenis_kelamin",
+      "targets": [
+        ["name=jenis_kelamin", "name"],
+        ["css=label:nth-child(2) > input", "css:finder"],
+        ["xpath=//input[@name='jenis_kelamin']", "xpath:attributes"],
+        ["xpath=//label[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "801cca43-1428-4ff2-9326-20d8042ab28f",
+      "comment": "",
+      "command": "click",
+      "target": "name=daftar",
+      "targets": [
+        ["name=daftar", "name"],
+        ["css=p:nth-child(6) > input", "css:finder"],
+        ["xpath=//input[@name='daftar']", "xpath:attributes"],
+        ["xpath=//p[6]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "7adb6c9a-a973-4579-9dc0-2f0e06921f52",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=More info",
+      "targets": [
+        ["linkText=More info", "linkText"],
+        ["css=.bg-info > .small-box-footer", "css:finder"],
+        ["xpath=//a[contains(text(),'More info')]", "xpath:link"],
+        ["xpath=(//a[contains(@href, 'view_data.php')])[2]", "xpath:href"],
+        ["xpath=//section/div/div/div/div/a", "xpath:position"],
+        ["xpath=//a[contains(.,'More info ')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "d2383849-9824-4784-a7fb-8f0bb2b00c32",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=tr:nth-child(6) > td:nth-child(2)",
+      "targets": [
+        ["css=tr:nth-child(6) > td:nth-child(2)", "css:finder"],
+        ["xpath=//table[@id='example1']/tbody/tr[6]/td[2]", "xpath:idRelative"],
+        ["xpath=//tr[6]/td[2]", "xpath:position"],
+        ["xpath=//td[contains(.,'Rizky')]", "xpath:innerText"]
+      ],
+      "value": "Rizky"
+    }, {
+      "id": "20d2fe68-855b-4806-87a5-62f4c18c4f59",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f1ed6e98-a20a-4257-982e-abb70aad1117",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0d78365c-0c0a-49bf-a1cf-8601f93921c6"]
+  }],
+  "urls": [],
+  "plugins": []
+}

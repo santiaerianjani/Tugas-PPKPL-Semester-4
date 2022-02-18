@@ -1,0 +1,116 @@
+{
+  "id": "573d1a28-cd15-4b04-8497-302b62c336a0",
+  "version": "2.0",
+  "name": "Pengujian Aplikasi CRUD Pendaftaran Siswa",
+  "url": "http://localhost/pendaftaran_siswa/login/",
+  "tests": [{
+    "id": "0d78365c-0c0a-49bf-a1cf-8601f93921c6",
+    "name": "Untitled",
+    "commands": []
+  }, {
+    "id": "d7d5e6e0-7013-462e-bc7f-9a44d638823a",
+    "name": "1. (+) Pengujian fungsional PL terhadap fitur login (Username dan password yang sudah terdaftar pada basis data)",
+    "commands": [{
+      "id": "f148acae-7deb-49f5-b84f-d96c71f9bc39",
+      "comment": "",
+      "command": "open",
+      "target": "http://localhost/pendaftaran_siswa/login/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "642a277d-8183-4597-b169-8a5fafd95608",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1382x744",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "05e7d382-6b8b-4891-877c-682a5ed040f4",
+      "comment": "",
+      "command": "click",
+      "target": "name=Username",
+      "targets": [
+        ["name=Username", "name"],
+        ["css=.input-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "c2a05368-c128-4581-85e2-f3eccf8d4515",
+      "comment": "",
+      "command": "type",
+      "target": "name=Username",
+      "targets": [
+        ["name=Username", "name"],
+        ["css=.input-group:nth-child(1) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Username']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "dbd9b459-137c-4bc8-827f-af9659338d5c",
+      "comment": "",
+      "command": "click",
+      "target": "name=Password",
+      "targets": [
+        ["name=Password", "name"],
+        ["css=.input-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a38c93cb-c284-4b0c-94d8-a0d43961ec01",
+      "comment": "",
+      "command": "type",
+      "target": "name=Password",
+      "targets": [
+        ["name=Password", "name"],
+        ["css=.input-group:nth-child(2) > .form-control", "css:finder"],
+        ["xpath=//input[@name='Password']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "admin"
+    }, {
+      "id": "5232d56c-a0b5-4f1f-8905-bd0792b08ccf",
+      "comment": "",
+      "command": "click",
+      "target": "css=.btn",
+      "targets": [
+        ["css=.btn", "css:finder"],
+        ["xpath=//button[@type='submit']", "xpath:attributes"],
+        ["xpath=//button", "xpath:position"],
+        ["xpath=//button[contains(.,'Sign In')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "e0607eda-5b91-4911-9f74-640ef306e8b6",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=.content-wrapper",
+      "targets": [
+        ["css=.content-wrapper", "css:finder"],
+        ["xpath=//body/div/div", "xpath:position"]
+      ],
+      "value": "Dashboard\\n5\\nData Siswa Baru\\nMore info\\n2\\nData Guru\\nMore info\\n3\\nData Mata pelajaran\\nMore info"
+    }, {
+      "id": "d0fb8a02-2ca6-4821-811b-43efdc67d91c",
+      "comment": "",
+      "command": "close",
+      "target": "",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "f1ed6e98-a20a-4257-982e-abb70aad1117",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["0d78365c-0c0a-49bf-a1cf-8601f93921c6"]
+  }],
+  "urls": [],
+  "plugins": []
+}
